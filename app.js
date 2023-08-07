@@ -1,5 +1,17 @@
 "use strict";
 let yourName = prompt("enter your name ")
+function isNumber(str) {
+    return !!(
+        str &&
+        str.match(/^\d+$/));
+}
+if (isNumber(yourName)) {
+    do {
+        alert('wrong,plrase try again');
+        yourName = prompt('Please enter your name');
+    }
+    while (isNumber(yourName));
+}
 let yourMark = prompt(" enter your mark" + "  " + yourName)
 let x = Math.floor(yourMark)
 
